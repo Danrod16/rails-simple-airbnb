@@ -1,0 +1,11 @@
+
+<%= simple_form_for (@flat) do |f| %>
+  <%= f.input :name, as: :hidden, :input_html => { :value => "EUR" } %>
+  <%= f.input :price_per_night, collection: 0..100, label: 'How much interest do you want in % per annum?' %>
+  <%= f.input :description, label: 'Please describe your loan conditions:' %>
+  <%= f.input :number_of_guests, label: 'Please give your bank account from which the loan shall be drawn:' %>
+  <%= f.input :address, label: 'Please give the address of your loan:' %>
+  <%#= f.input :photo, label: 'Upload your photo:' %>
+  <%#= f.input :photo_cache, as: :hidden %>
+  <%= f.submit 'Post the flat' %>
+<% end %>

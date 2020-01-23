@@ -9,7 +9,12 @@ class FlatsController < ApplicationController
   def update
   end
 
+  def new
+    @flat = Flat.new
+  end
+
   def create
+     @flat = Flat.create
   end
 
   def destroy
